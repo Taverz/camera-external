@@ -1,0 +1,69 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="io.flutter.plugins.cameraexample">
+
+  
+  <uses-permission android:name="android.permission.CAMERA">
+  </uses-permission>
+
+  <!-- <uses-feature android:name="android.hardware.camera">
+  </uses-feature> -->
+
+  <!-- <uses-permission android:name="android.permission.CAMERA"/> -->
+  <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+  <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
+
+  <!-- A camera with (optional) RAW capability is required to use this application -->
+  <uses-feature android:name="android.hardware.camera.any" />
+  <uses-feature android:name="android.hardware.camera.raw" android:required="false" />
+
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <!-- <uses-feature android:name="android.hardware.camera"/> -->
+  <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+  <!--bugly permission need-->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+   <uses-permission android:name="android.permission.READ_LOGS" />
+   <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+   <uses-permission android:name="android.permission.READ_CALL_LOG" />
+
+  <!-- <uses-feature android:name="android.hardware.camera" /> -->
+  <!-- <uses-feature android:name="android.hardware.camera.autofocus" /> -->
+  <uses-feature android:name="android.hardware.camera2.full"/>
+
+  <!-- <uses-feature android:name="android.hardware.camera.any" /> -->
+
+  <application
+    android:icon="@mipmap/ic_launcher"
+    android:label="camera_example">
+    <activity
+      android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection"
+      android:hardwareAccelerated="true"
+      android:launchMode="singleTop"
+
+      android:exported="true"
+      android:name="io.flutter.embedding.android.FlutterActivity"
+      android:theme="@style/LaunchTheme"
+      android:windowSoftInputMode="adjustResize">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <meta-data android:name="flutterEmbedding" android:value="2"/>
+  </application>
+
+  <uses-feature
+    android:name="android.hardware.camera"
+    android:required="true"/>
+
+    
+  <!-- <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.FLASHLIGHT"/> -->
+</manifest>
